@@ -1,0 +1,107 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Ejercicios Funciones 12 de agosto </h1>
+        <h2>Ejercicio funciones: Calculadora avanzada</h2>
+
+        <script>
+            // Desarrolla una calculadora avanzada que ofrezca un menú interactivo para que el usuario 
+            //seleccione la operación que desea realizar. Crea las funciones para las operaciones básicas Añade 
+            //las siguientes funciones adicionales: potencia, raizCuadrada y porcentaje.
+            document.write("<h2>Selecciones una Operación</h2>");
+            document.write("1. Sumar<br>");
+            document.write("2. Restar<br>");
+            document.write("3. Multiplicar<br>");
+            document.write("4. Dividir<br>");
+            document.write("5. potencia<br>");
+            document.write("6. Raiz cuadrada<br>");
+            document.write("7. Porcentaje<br>");
+            document.write("8. Salir<br>");
+
+
+            //Funciones para las operaciones matematicas
+            function sumar (a,b){
+                return a + b;
+            }
+
+            function restar (a,b){
+                return a - b;
+            }
+
+            function Multiplicar (a,b){
+                return a * b;
+            }
+
+            function dividir (a,b){
+                if (b == 0){
+                    return "No se puede dividir por 0";
+                }
+                return a / b;
+            }
+
+            function potencia (a,b){
+                let rest = 1;
+                for (let i = 0; i < b; i++){
+                    rest *= a;
+                }
+                return rest;
+            }
+
+            function raizCuadrada (a){
+                return Math.sqrt(a);
+            }
+
+            function Porcentaje (a, b){
+                return a / 100 * b;
+            }
+
+            //Funcion principal que ejecuta el menú
+            let opcion;
+            do {
+                opcion = parseInt(prompt("Ingrese una opción: "));
+
+                if (opcion >= 1 && opcion <=7){
+                    let num1 = parseFloat(prompt("Ingrese el primer número: "));
+                    let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+                    let resultado;
+
+                    switch(opcion){
+                        case 1:
+                            resultado = sumar(num1, num2);
+                            document.write("El resultado de la suma es: " + resultado + "<br>");
+                            break;
+                        case 2:
+                            resultado = restar(num1, num2);
+                            document.write("El resultado de la resta es: " + resultado + "<br>");
+                            break;
+                        case 3:
+                            resultado = multiplicar(num1, num2);
+                            document.write("El resultado de la multiplicación es: " + resultado + "<br>");
+                            break;
+                        case 4:
+                            resultado = Dividir(num1, num2);
+                            document.write("El resultado de la división es: " + resultado + "<br>");
+                            break;
+                        case 5:
+                            resultado = potencia(num1, num2);
+                            document.write("El resultado de la potencia es: " + resultado + "<br>");
+                            break;
+                        case 6:
+                            resultado = raizCuadrada(num1);
+                            document.write("El resultado de la raiz cuadrada es: " + resultado + "<br>");
+                            break;
+                        case 7:
+                            resultado = Porcentaje(num1, num2);
+                            document.write("El resultado del porcenjae es: " + resultado + "<br>");
+                            break;
+                    }
+                } else if (opción === 8) {
+                    document.write("Saliendo del programa...<br>");
+                } else {
+                    document.write("Opción no valida, Intentelo de nuevo. <br>");
+                }
+                } while (Opcion !== 8);
+        </script>
+    </body>
+</html>
