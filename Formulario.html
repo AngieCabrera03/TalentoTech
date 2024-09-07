@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biografia Vanessa Cabrera</title>
+        <meta name="description" content="Descripción de la página web para motores de búsqueda.">
+        <link rel="stylesheet" href="CSSVanessa.css"> <!-- Enlace a una hoja de estilos CSS externa -->
+    </head>
+<body>
+        <!--Clase 2 Formulario-->
+    <h2>Formulario</h2>
+    <form action="/submit" method="post" style="background-color: #f1e7f5;">
+        <!-- Nombre Completo -->
+    <fieldset>
+        <div class="form-control">
+            <label for="fecha-Diligenciar">Fecha de diligenciamiento:</label>
+            <input type="datetime-local" id="fecha-Diligenciar" name="fecha-Diligenciar" required>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Información Personal</legend>  
+        <div class="form-control">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required minlength="3" maxlength="50" size="30" autofocus>
+        </div>
+
+        <!-- Radio buttons -->
+        <div class="form-control">
+            <p>Género:</p>
+            <input type="radio" id="hombre" name="genero" value="hombre" required>
+            <label for="hombre">Hombre</label><br>
+            <input type="radio" id="mujer" name="genero" value="mujer">
+            <label for="mujer">Mujer</label>
+        </div>
+
+        <!-- Número -->
+        <div class="form-control">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="100" step="1" required>
+        </div>
+
+        <!-- Fecha -->
+        <div class="form-control">
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+        </div>
+
+        <!-- Contraseña -->
+         <div class=""form-control">
+            <label for="Contraseña">Contraseña</label>
+            <input type="password" id="Contraseña" name="Contraseña"
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Información de Contacto</legend>
+        <!-- Correo electrónico -->
+        <div class="form-control">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="on" required>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-control">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+        
+        <!-- URL -->
+        <div class="form-control">
+            <label for="website">Sitio Web:</label>
+            <input type="url" id="website" name="website" placeholder="https://ejemplo.com">
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend> Preferencias </legend>
+        <!-- Selector de color -->
+        <div class="form-control">
+            <label for="color">Color Favorito:</label>
+            <input type="color" id="color" name="color" value="#ff0000">
+        </div>         
+
+        <label for="Pais">Elige un País:</label>
+        <Select id="Pais" name="Pais" size="5" multiple>
+            <option value="EEUU">EEUU</option>
+            <option value="España">España</option>
+            <option value="Francia">Francia</option>
+            <option value="Australia">Australia</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Canada">Canada</option>
+            <option value="Brasil">Brasil</option>
+        </select>
+
+        <!-- Radio buttons -->
+        <div class="form-control">
+            <p>Que prefieres:</p>
+            <input type="radio" id="Peliculas" name="Gustos" value="Peliculas" required>
+            <label for="Peliculas">Ver Peliculas</label>           
+            <input type="radio" id="Libro" name="Gustos" value="Libro">
+            <label for="Libro">Leer Libros</label>
+            <input type="radio" id="Teatro" name="Gustos" value="Teatro">
+            <label for="Teatro"> Ir a Teatro</label><br>
+            <input type="radio" id="Series" name="Gustos" value="Series">
+            <label for="Series">Ver Series</label>
+            <input type="radio" id="Musica" name="Gustos" value="Musica">
+            <label for="Musica">Escuchar Musica</label>
+        </div>
+
+        <!-- Selector de archivo -->
+        <div class="form-control">
+            <label for="Foto">Foto de tu Mascota:</label>
+            <input type="file" id="Foto" name="Foto" accept=".jpg, .jpeg, .png" multiple>
+        </div>
+
+        <!-- Selector de rango -->
+        <div class="form-control">
+            <label for="volumen">Volumen:</label>
+            <input type="range" id="volumen" name="volumen" min="0" max="100" step="10">
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend>Acciones</legend>
+
+        <!-- Casilla de Verificación -->
+        <div class="form-control">
+            <label for="suscripcion">Suscribirse</label>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="form-control">
+            <input type="submit" value="Enviar">
+        </div>
+        
+        <!-- Botón de reinicio -->
+        <div class="form-control">
+            <input type="reset" value="Reiniciar">
+        </div>
+
+        <textarea name="message" rows="3" cols="30">
+            ...
+        </textarea>
+    </fieldset>
+    </form>
+</body>
+</html>
